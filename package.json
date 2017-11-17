@@ -1,0 +1,54 @@
+{
+  "name": "isomorphicreact",
+  "version": "0.0.1",
+  "description": "Isomorphic react boilerplate with ssr and csr",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "npm run build && NODE_ENV=production node src/server-es5.js",
+    "start:prod": "npm run build:prod && export UNIVERSAL=true && NODE_ENV=production node ./dist/server-es5.js",
+    "start:universal": "export UNIVERSAL=true && npm run start",
+    "start:dev": "export NODE_ENV=development && nodemon src/server.js",
+    "start:dev:universal": "export UNIVERSAL=true && npm run start:dev",
+    "build": "NODE_ENV=production webpack -p --profile --display-modules --optimize-minimize",
+    "build:prod": "NODE_ENV=production webpack -p --profile --display-modules --optimize-minimize --config webpack.config.prod.js",
+    "build:dev": "webpack -d",
+    "build:dev:watch": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:lint": "eslint src/",
+    "clear": "rimraf src/server-es5.js src/static/js/bundle.js .babel_cache ./dist"
+  },
+  "keywords": [
+    "boilerplate",
+    "ssr",
+    "csr",
+    "isomorphic",
+    "react"
+  ],
+  "author": "Guillermo Puente <guillermo.ps09@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.27.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.2.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
