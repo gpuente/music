@@ -68,7 +68,8 @@ class AudioPlayer extends Component {
   }
 
   handleLoadSong(data) {
-    this.setState({ time: data.time });
+    console.log(data);
+    this.setState({ time: data.time, song: data.currentSong });
   }
 
   handleChangeSong(track) {

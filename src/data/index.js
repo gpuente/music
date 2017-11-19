@@ -29,7 +29,7 @@ const tracks = [
     id: 'e85b1c5a-800e-45da-b909-1fe028827a95',
     source: 'e85b1c5a-800e-45da-b909-1fe028827a95.mp3',
     encode: 'mp3',
-    cover: 'http://thestatetimes.com/wp-content/uploads/2014/09/Toxicity.jpg',
+    cover: 'https://is5-ssl.mzstatic.com/image/thumb/Music/f9/25/f0/mzi.pjfjrguk.jpg/600x600bf.jpg',
     length: '04:03',
   },
   {

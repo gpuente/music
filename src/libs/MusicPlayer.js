@@ -52,6 +52,8 @@ class MusciPlayer {
       this.onLoadSong(data);
     };
 
+    this.song.onended = () => this.next();
+
     this.song.ontimeupdate = () => {
       const time = parseTime(this.song.currentTime);
       this.duration(time);
